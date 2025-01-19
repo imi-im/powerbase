@@ -84,6 +84,11 @@ export default [
         logo: "linear.svg",
     },
     {
+        key: "lark",
+        title: "Lark",
+        logo: "lark.svg",
+    },
+    {
         key: "discord",
         title: "Discord",
         logo: "discord.svg",
