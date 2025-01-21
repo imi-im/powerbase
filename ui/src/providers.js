@@ -2,6 +2,7 @@ import AppleOptions from "@/components/collections/providers/AppleOptions.svelte
 import MicrosoftOptions from "@/components/collections/providers/MicrosoftOptions.svelte";
 import OIDCOptions from "@/components/collections/providers/OIDCOptions.svelte";
 import SelfHostedOptions from "@/components/collections/providers/SelfHostedOptions.svelte";
+import WeComOptions from "@/components/collections/providers/WeComOptions.svelte";
 
 // @todo remove after allowing custom OAuth2 UI extendability
 //
@@ -82,6 +83,13 @@ export default [
         key: "linear",
         title: "Linear",
         logo: "linear.svg",
+    },
+    {
+        key: "wecom",
+        title: "企业微信",
+        logo: "wecom.svg",
+        optionsComponent: WeComOptions,
+        optionsComponentProps: { required: true },
     },
     {
         key: "discord",
