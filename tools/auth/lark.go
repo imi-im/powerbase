@@ -15,19 +15,17 @@ import (
 
 var _ Provider = (*LarkProvider)(nil)
 
-// NameKakao is the unique name of the Kakao provider.
 const NameLark string = "lark"
 
 const (
-	Name        = "lark"
-	DisplayName = "Lark"
+	LarkDisplayName = "Lark"
 	// AuthURL     = "/oidc/oauth/lark/authorize"
 	// TokenURL    = "/oidc/oauth/lark/token"
 	// UserInfoURL = "/oidc/oauth/lark/userinfo"
 
-	ORIG_AuthURL     = "https://open.feishu.cn/open-apis/authen/v1/authorize"
-	ORIG_TokenURL    = "https://open.feishu.cn/open-apis/authen/v1/access_token"
-	ORIG_UserInfoURL = "https://open.feishu.cn/open-apis/authen/v1/user_info"
+	Lark_ORIG_AuthURL     = "https://open.feishu.cn/open-apis/authen/v1/authorize"
+	Lark_ORIG_TokenURL    = "https://open.feishu.cn/open-apis/authen/v1/access_token"
+	Lark_ORIG_UserInfoURL = "https://open.feishu.cn/open-apis/authen/v1/user_info"
 )
 
 type larkUser struct {
@@ -53,10 +51,10 @@ func init() {
 func NewLarkProvider() Provider {
 	p := &LarkProvider{}
 	p.SetPKCE(false)
-	p.SetDisplayName(DisplayName)
-	p.SetAuthURL(ORIG_AuthURL)
-	p.SetTokenURL(ORIG_TokenURL)
-	p.SetUserInfoURL(ORIG_UserInfoURL)
+	p.SetDisplayName(LarkDisplayName)
+	p.SetAuthURL(Lark_ORIG_AuthURL)
+	p.SetTokenURL(Lark_ORIG_TokenURL)
+	p.SetUserInfoURL(Lark_ORIG_UserInfoURL)
 
 	return p
 }
